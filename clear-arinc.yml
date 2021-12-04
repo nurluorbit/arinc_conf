@@ -1,0 +1,15 @@
+#!/usr/bin/env ansible-playbook
+
+---
+- hosts: all
+  remote_user: root
+  gather_facts: no
+  strategy: free
+
+  pre_tasks:
+    - name: Wait for host connection
+      wait_for_connection:
+        timeout: 259200
+
+  roles:
+    - clear-arinc

@@ -1,0 +1,11 @@
+---
+  - name: clear contents in file1
+    lineinfile:
+      path: /states/arinc1
+      regexp: '.*'
+      state: absent
+  - name: clear contents in files2
+    lineinfile:
+      path: /states/arinc2
+      regexp: '.*'
+      state: absent
